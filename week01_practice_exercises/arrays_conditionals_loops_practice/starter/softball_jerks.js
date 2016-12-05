@@ -7,7 +7,7 @@
 // 1. Make a roster variable and set it to an array of the players.
 console.log("1. The Roster\n")
 
-
+// *** TEST ***
 
 console.log("\n");
 // 2. Set the batting lineup to the last 9 people on the roster.
