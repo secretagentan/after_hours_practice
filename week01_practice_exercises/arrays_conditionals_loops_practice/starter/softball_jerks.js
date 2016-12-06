@@ -52,9 +52,18 @@ console.log('\n');
 //    Lex!"
 console.log('4. Take Us Home, Slugger\n')
 
+var slugger = lineup[3].substring(0,3);
 
+var onBase = 2;
+
+if (onBase >= 2) {
+  console.log(slugger + " take us home!");
+} else {
+  console.log("Get us on base" + slugger);
+};
 
 console.log('\n');
+
 // 5. Below is an undefined variable, warmingUp. Create a variable
 //    leadingBy and set it to a number. Then, if leadingBy is less than
 //    2, set warmingUp to "Sam Fishinbottom". Finally, create a variable
@@ -62,7 +71,17 @@ console.log('\n');
 //    roster.
 console.log('5. Pitcher or Closer?\n')
 
+var warmingUp;
 
+var leadingBy = 2;
+
+if (leadingBy < 2) {
+  var warmingUp = roster[1];
+};
+
+var pitcher = warmingUp || roster[0];
+
+console.log(pitcher);
 
 console.log('\n');
 // 6. Create a variable downBy. If the pitcher is Sam Fishinbottom AND
@@ -70,7 +89,15 @@ console.log('\n');
 //    just tell her to strike 'em out.
 console.log('6. Dirty Tricks\n')
 
+var downBy = function() {
+  if (pitcher === roster[1] && downBy > 2) {
+    console.log("Go for the knees, " + roster[1]);
+  } else {
+    console.log("Strike 'em out!");
+  }
+};
 
+console.log(downBy(1));
 
 // C. ||||||| LOOP TROOP |||||||
 console.log('\n');
