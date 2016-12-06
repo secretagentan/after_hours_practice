@@ -99,25 +99,53 @@ var downBy = function() {
 
 console.log(downBy(1));
 
-// C. ||||||| LOOP TROOP |||||||
 console.log('\n');
+
+// C. ||||||| LOOP TROOP |||||||
+
 // 7. Using a while loop, iterate through the lineup and for each
 //    player, print to the console "<player name> is ready to knock it
 //    out of the park!"
 console.log('7. Run Through the Batting Order\n');
 
+var batterIndex = 0;
 
+while (batterIndex < 9) {
+  console.log(batterUp + " is ready to knock it out of the park!");
+  batterIndex++;
+  batterUp = lineup[batterIndex];
+};
 
 console.log('\n');
+
 // 8. No one can ever remember which one is Greg and which is Craig. If
 //    a player contains "Greg" in their name, the team should fumble
 //    when cheering them on. Otherwise, they should cheer: "Let's go
 //    <player name>!". Use a for loop!
 console.log('8. The Greg Craig Predicament\n');
 
+// var playerIndex = 0;
 
+// while (playerIndex < 12) {
+//   playerIndex++;
+//   player = roster[playerIndex];
+//   if (player.contains("Greg")) {
+//     console.log("GO ... ??");
+//   } else {
+//     console.log("Let's go " + player);
+//   }
+// };
+
+for (var i = 0; i < lineup.length; i++) {
+  if (lineup[i].indexOf("Greg") !== -1) {
+    console.log("GO CRAIG...err Greg???...");
+  } else {
+    console.log("Let's go " + lineup[i] + "!");
+  }
+};
 
 console.log('\n');
+
 // 9. The team is getting new jerseys with names on the back, but the
 //    cost of printing a name over 7 characters isn't in the budget.
 //    Create an empty array with the name playersCut. Then loop over the
